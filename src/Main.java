@@ -38,8 +38,10 @@ public class Main {
 
         final double taxRate = 0.13; // налог 13%
 
-        for (int i = 0; i < inputArray2.length; i++) {
-            outputArray2[i] = inputArray2[i] * taxRate;
+        int index = 0;
+        for (int payment : inputArray2) {
+            outputArray2[index] = payment * taxRate;
+            index++;
         }
 
         System.out.println("inputArray2: " + Arrays.toString(inputArray2));
@@ -50,8 +52,10 @@ public class Main {
         int[] inputArray3 = {7000, 13000, 2500, 6000, 4100};
         boolean[] outputArray3 = new boolean[inputArray3.length];
         final int bonus = 5000;
-        for (int i = 0; i < inputArray3.length; i++) {
-            outputArray3[i] = inputArray3[i] > bonus;
+        int pos = 0;
+        for (int currentBonus : inputArray3) {
+            outputArray3[pos] = currentBonus > bonus;
+            pos++;
         }
         System.out.println("inputArray3: " + Arrays.toString(inputArray3));
         System.out.println("outputArray3: " + Arrays.toString(outputArray3));
