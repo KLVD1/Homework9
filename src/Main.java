@@ -63,27 +63,30 @@ public class Main {
         System.out.println("\n\tЗадание#4\n");
 
         int[] inputArray4 = {7000, 13000, -2500, 6000, -100};
-        boolean outputArray4 = true;
+        boolean[] outputArray4 = new boolean[1];
+        boolean allNonNegative = true;
         for (int balace : inputArray4) {
             if (balace < 0) {
-                outputArray4 = false;
+                allNonNegative = false;
                 break;
             }
         }
         System.out.println("inputArray4: " + Arrays.toString(inputArray4));
-        System.out.println("outputArray4: " + outputArray4);
+        System.out.println("outputArray4: " + Arrays.toString(outputArray4));
 
         System.out.println("\n\tЗадание#5\n");
 
         int[] inputArray5 = {70000, 130000, -100, 250000, 60000};
-        int outputArray5 = 0;
+        int[] outputArray5 = new int[1];
+        int positiveCount = 0;
         for (int profit : inputArray5) {
             if (profit > 0) {
-                outputArray5++;
+                positiveCount++;
             }
         }
+        outputArray5[0] = positiveCount;
         System.out.println("inputArray5: " + Arrays.toString(inputArray5));
-        System.out.println("outputArray5: " + outputArray5);
+        System.out.println("outputArray5: " + Arrays.toString(outputArray5));
 
     }
 }
