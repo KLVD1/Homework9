@@ -65,14 +65,15 @@ public class Main {
         int[] inputArray4 = {7000, 13000, -2500, 6000, -100};
         boolean[] outputArray4 = new boolean[1];
         boolean allNonNegative = true;
-        for (int balace : inputArray4) {
-            if (balace < 0) {
+        for (int balance : inputArray4) {
+            if (balance < 0) {
                 allNonNegative = false;
                 break;
             }
         }
+        outputArray4[0]=allNonNegative;
         System.out.println("inputArray4: " + Arrays.toString(inputArray4));
-        System.out.println("outputArray4: " + Arrays.toString(outputArray4));
+        System.out.println("outputArray4[0]: " + outputArray4[0]);
 
         System.out.println("\n\tЗадание#5\n");
 
